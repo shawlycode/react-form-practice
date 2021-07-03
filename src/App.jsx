@@ -29,7 +29,8 @@ handleSubmit=(e)=>{
   render() {
     return (
       <div className="container">
-         <h1>React Forms</h1>
+         <h1>Registration Form</h1>
+        
       <form  onSubmit={this.handleSubmit}>
        
         <label htmlFor="">Username:</label>
