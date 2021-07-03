@@ -7,7 +7,10 @@ class App extends Component {
     this.state={
       username:"",
       email:"",
-      password:""
+      password:"",
+      phone:"",
+      address:"",
+      position:""
     }
   
 this.handleChange= this.handleChange.bind(this)
@@ -20,7 +23,7 @@ handleChange(e){
 handleSubmit=(e)=>{
   e.preventDefault();
   console.log(this.state)
-  this.setState({username:"",email:"",password:""})
+  this.setState({username:"",email:"",password:"", phone:"", company:"",position:""})
 }
 
   render() {
@@ -37,7 +40,14 @@ handleSubmit=(e)=>{
         <br />
         <label htmlFor="">Password:</label>
         <input type="password" name="password" onChange={this.handleChange} value={this.state.password}/>
+        <label htmlFor="">Phone Number:</label>
+        <input type="Phonenumber" name="phone" onChange={this.handleChange} value={this.state.phone}/>
+        <label htmlFor="">Company:</label>
+        <input type="text" name="address" onChange={this.handleChange} value={this.state.address}/>
+        <label htmlFor="">Position/Role:</label>
+        <input type="text" name="position" onChange={this.handleChange} value={this.state.position}/>
         <br />
+        
         <button type="submit" onSubmit={this.handleSubmit}>Submit</button>
       </form>
       </div>
